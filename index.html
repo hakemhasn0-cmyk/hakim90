@@ -1,0 +1,1080 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حملة إصلاح طرق قرية الشغور</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #3498db;
+            --primary-dark: #2980b9;
+            --secondary: #2ecc71;
+            --secondary-dark: #27ae60;
+            --accent: #e74c3c;
+            --light: #f8f9fa;
+            --dark: #2c3e50;
+            --gray: #7f8c8d;
+            --gradient: linear-gradient(135deg, var(--primary), var(--secondary));
+            --gradient-dark: linear-gradient(135deg, var(--primary-dark), var(--secondary-dark));
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            --radius: 16px;
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Tajawal', sans-serif;
+        }
+        
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background: var(--gradient);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .logo {
+            font-size: 2.2rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        }
+        
+        .logo i {
+            background: white;
+            color: var(--primary);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding: 100px 0;
+            text-align: center;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                        url('https://images.unsplash.com/photo-1542601098-8adb5a2410d4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+            color: white;
+            position: relative;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            animation: fadeIn 1s ease;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            font-weight: 800;
+        }
+        
+        .hero p {
+            font-size: 1.4rem;
+            margin-bottom: 30px;
+            font-weight: 500;
+        }
+        
+        /* Quran Verse */
+        .quran-verse {
+            background-color: var(--light);
+            padding: 50px;
+            text-align: center;
+            font-size: 1.8rem;
+            font-style: italic;
+            color: var(--dark);
+            border-right: 5px solid var(--secondary);
+            margin: 50px 0;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .quran-verse::before {
+            content: """;
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-size: 5rem;
+            color: rgba(46, 204, 113, 0.1);
+        }
+        
+        /* Donation Section */
+        .donation-section {
+            padding: 80px 0;
+            background-color: white;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            color: var(--dark);
+            font-size: 2.5rem;
+            font-weight: 800;
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 100px;
+            height: 5px;
+            background: var(--gradient);
+            margin: 15px auto;
+            border-radius: 5px;
+        }
+        
+        .donation-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .donation-card {
+            background: white;
+            padding: 30px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            border: 1px solid #eee;
+        }
+        
+        .donation-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+        }
+        
+        .donation-card i {
+            font-size: 3.5rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+            display: block;
+        }
+        
+        .donation-card h3 {
+            margin-bottom: 15px;
+            color: var(--dark);
+            font-size: 1.6rem;
+        }
+        
+        .bank-info {
+            background-color: var(--light);
+            padding: 20px;
+            border-radius: var(--radius);
+            margin: 20px 0;
+            font-family: monospace;
+            font-size: 1.1rem;
+            text-align: center;
+            direction: ltr;
+            overflow-x: auto;
+        }
+        
+        .whatsapp-btn {
+            display: inline-block;
+            background-color: #25D366;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            margin-top: 15px;
+            font-weight: bold;
+            transition: var(--transition);
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+        }
+        
+        .whatsapp-btn:hover {
+            background-color: #128C7E;
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+        }
+        
+        /* Donation Form */
+        .donation-form {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 40px;
+            background-color: white;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            border: 1px solid #eee;
+        }
+        
+        .form-group {
+            margin-bottom: 25px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 600;
+            color: var(--dark);
+            font-size: 1.1rem;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 15px 20px;
+            border: 2px solid #ddd;
+            border-radius: var(--radius);
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+        
+        .form-control:focus {
+            border-color: var(--primary);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+        }
+        
+        .currency-options {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+        
+        .currency-option {
+            flex: 1;
+            text-align: center;
+            padding: 25px;
+            border: 2px solid #ddd;
+            border-radius: var(--radius);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .currency-option.active {
+            border-color: var(--primary);
+            background-color: rgba(52, 152, 219, 0.1);
+            transform: scale(1.03);
+        }
+        
+        .currency-option i {
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+            display: block;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 18px 40px;
+            background: var(--gradient);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: var(--transition);
+            width: 100%;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            background: var(--gradient-dark);
+        }
+        
+        /* Progress Section */
+        .progress-section {
+            margin: 50px 0;
+            background: white;
+            padding: 30px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+        }
+        
+        .progress-info {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+        
+        .progress-bar {
+            height: 25px;
+            background-color: #f0f0f0;
+            border-radius: 50px;
+            overflow: hidden;
+        }
+        
+        .progress {
+            height: 100%;
+            background: var(--gradient);
+            width: 0;
+            transition: width 1s ease-in-out;
+            border-radius: 50px;
+            position: relative;
+        }
+        
+        .progress::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+            background-size: 1rem 1rem;
+            animation: progressAnimation 1s linear infinite;
+        }
+        
+        @keyframes progressAnimation {
+            0% {
+                background-position: 1rem 0;
+            }
+            100% {
+                background-position: 0 0;
+            }
+        }
+        
+        /* Amount Display */
+        .amount-display {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin: 40px 0;
+        }
+        
+        .amount-box {
+            background: white;
+            padding: 30px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: var(--transition);
+            border: 2px solid transparent;
+            background-clip: padding-box;
+            position: relative;
+        }
+        
+        .amount-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: -1;
+            margin: -2px;
+            border-radius: inherit;
+            background: var(--gradient);
+        }
+        
+        .amount-box:hover {
+            transform: translateY(-5px);
+        }
+        
+        .amount-box h3 {
+            margin-bottom: 15px;
+            color: var(--dark);
+            font-size: 1.4rem;
+        }
+        
+        .amount-value {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--primary);
+        }
+        
+        /* Donors List */
+        .donors-list {
+            margin: 60px 0;
+            background: white;
+            padding: 40px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+        }
+        
+        .donor-card {
+            background-color: white;
+            padding: 25px;
+            border-radius: var(--radius);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            margin-bottom: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: var(--transition);
+            border-left: 4px solid var(--primary);
+        }
+        
+        .donor-card:hover {
+            transform: translateX(10px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .donor-info {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .donor-avatar {
+            width: 60px;
+            height: 60px;
+            background: var(--gradient);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+        }
+        
+        /* Share Section */
+        .share-section {
+            text-align: center;
+            padding: 60px 0;
+            background: var(--light);
+        }
+        
+        .share-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 25px;
+        }
+        
+        .share-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            color: white;
+            font-size: 1.8rem;
+            text-decoration: none;
+            transition: var(--transition);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .share-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .facebook {
+            background-color: #3b5998;
+        }
+        
+        .whatsapp {
+            background-color: #25D366;
+        }
+        
+        .link {
+            background-color: var(--primary);
+        }
+        
+        /* WhatsApp Float Buttons */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            width: 70px;
+            height: 70px;
+            background-color: #25D366;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+            z-index: 100;
+            animation: pulse 2s infinite;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .whatsapp-float.second {
+            left: 110px;
+            background-color: var(--primary);
+        }
+        
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+            }
+            50% {
+                transform: scale(1.1);
+                box-shadow: 0 9px 25px rgba(0, 0, 0, 0.4);
+            }
+            100% {
+                transform: scale(1);
+                box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+            }
+        }
+        
+        /* Notification */
+        .notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 20px;
+            background-color: var(--secondary);
+            color: white;
+            border-radius: var(--radius);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+            transform: translateX(100%);
+            opacity: 0;
+            transition: all 0.5s;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .notification.show {
+            transform: translateX(0);
+            opacity: 1;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 60px 0 30px;
+            text-align: center;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            text-align: right;
+            margin-bottom: 40px;
+        }
+        
+        .footer-section h3 {
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+            color: var(--secondary);
+        }
+        
+        .footer-section p {
+            margin-bottom: 10px;
+        }
+        
+        .copyright {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .currency-options {
+                flex-direction: column;
+            }
+            
+            .donation-form {
+                padding: 25px;
+            }
+            
+            .amount-display {
+                grid-template-columns: 1fr;
+            }
+            
+            .whatsapp-float.second {
+                left: 30px;
+                bottom: 110px;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .quran-verse {
+                padding: 30px 20px;
+                font-size: 1.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- إشعار التبرع -->
+    <div class="notification" id="notification">
+        <i class="fas fa-heart"></i>
+        <div>تبرع جديد وصل! شكراً لكرمكم.</div>
+    </div>
+
+    <!-- أزرار الواتساب العائمة -->
+    <a href="https://wa.me/905393033375" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    
+    <a href="https://wa.me/352681133085" class="whatsapp-float second" target="_blank">
+        <i class="fas fa-hands-helping"></i>
+    </a>
+
+    <!-- الرأس -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-hands-helping"></i> 
+                <span>حملة إصلاح طرق قرية الشغور</span>
+            </div>
+            <p>يداً بيد لنجعل القرية أكثر أمناً وسهولة في الوصول</p>
+        </div>
+    </header>
+
+    <!-- قسم البطل -->
+    <section class="hero">
+        <div class="container hero-content">
+            <h1>يداً بيد لإصلاح طرق قريتنا 👐</h1>
+            <p>شاركوا في إصلاح الطرق وتسهيل حياة الأهالي. تبرعكم يساهم في بناء مجتمع أفضل وتوفير سبل العيش الكريم.</p>
+        </div>
+    </section>
+
+    <!-- آية قرآنية -->
+    <div class="container">
+        <div class="quran-verse">
+            "مَّثَلُ الَّذِينَ يُنفِقُونَ أَمْوَالَهُمْ فِي سَبِيلِ اللَّهِ كَمَثَلِ حَبَّةٍ أَنبَتَتْ سَبْعَ سَنَابِلَ فِي كُلِّ سُنْبُلَةٍ مِّائَةُ حَبَّةٍ ۗ وَاللَّهُ يُضَاعِفُ لِمَن يَشَاءُ ۗ وَاللَّهُ وَاسِعٌ عَلِيمٌ" (البقرة: 261)
+        </div>
+    </div>
+
+    <!-- طرق التبرع -->
+    <section class="donation-section">
+        <div class="container">
+            <h2 class="section-title">طرق التبرع</h2>
+            
+            <div class="donation-cards">
+                <div class="donation-card">
+                    <i class="fas fa-money-bill-wave"></i>
+                    <h3>التبرع المباشر</h3>
+                    <p>يمكنكم التبرع مباشرة عبر الموقع</p>
+                </div>
+                
+                <div class="donation-card">
+                    <i class="fas fa-university"></i>
+                    <h3>تحويل بنكي (داخل تركيا)</h3>
+                    <p>يمكنكم التحويل إلى الحساب البنكي:</p>
+                    <div class="bank-info">TR480020600235048925180001</div>
+                    <p>اسم المستفيد: MUHLIS ŞEH MUHAMMED</p>
+                </div>
+                
+                <div class="donation-card">
+                    <i class="fas fa-hand-holding-usd"></i>
+                    <h3>التبرع مباشرة (داخل سوريا)</h3>
+                    <p>للتبرع داخل سوريا، يمكنكم التواصل مع:</p>
+                    <p><strong>عبدالمعين حسن</strong></p>
+                    <a href="https://wa.me/352681133085" class="whatsapp-btn" target="_blank">
+                        <i class="fab fa-whatsapp"></i> التواصل عبر واتساب
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- عرض المبالغ -->
+    <div class="container">
+        <div class="amount-display">
+            <div class="amount-box">
+                <h3>المبلغ الإجمالي (ليرة تركية)</h3>
+                <div class="amount-value" id="totalTRY">0 ₺</div>
+            </div>
+            <div class="amount-box">
+                <h3>المبلغ الإجمالي (دولار أمريكي)</h3>
+                <div class="amount-value" id="totalUSD">0 $</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- إحصائيات التبرع -->
+    <div class="container">
+        <div class="progress-section">
+            <div class="progress-info">
+                <span>المبلغ المحقق: <span id="collectedAmount">0</span></span>
+                <span>الهدف: <span id="targetAmount">100,000</span> ليرة تركية</span>
+            </div>
+            <div class="progress-bar">
+                <div class="progress" id="donationProgress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- نموذج التبرع -->
+    <section class="donation-section">
+        <div class="container">
+            <div class="donation-form">
+                <h2 class="section-title">تبرعكم يحدث فرقاً</h2>
+                <form id="donationForm">
+                    <div class="currency-options">
+                        <div class="currency-option active" data-currency="try">
+                            <i class="fas fa-lira-sign"></i>
+                            <div>الليرة التركية</div>
+                        </div>
+                        <div class="currency-option" data-currency="usd">
+                            <i class="fas fa-dollar-sign"></i>
+                            <div>الدولار الأمريكي</div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="amount">المبلغ (<span id="currencyLabel">ليرة تركية</span>)</label>
+                        <input type="number" id="amount" class="form-control" placeholder="ادخل المبلغ" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="name">اسم المتبرع</label>
+                        <input type="text" id="name" class="form-control" placeholder="ادخل اسمك" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">رقم الهاتف (اختياري)</label>
+                        <input type="tel" id="phone" class="form-control" placeholder="ادخل رقم الهاتف">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">رسالة من المتبرع (اختياري)</label>
+                        <textarea id="message" class="form-control" rows="3" placeholder="اكتب رسالتك هنا"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn">تبرع الآن <i class="fas fa-hand-holding-heart"></i></button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- قائمة المتبرعين -->
+    <div class="container donors-list">
+        <h2 class="section-title">آخر المتبرعين</h2>
+        <div id="donorsContainer">
+            <div class="loading">جاري تحميل بيانات المتبرعين...</div>
+        </div>
+    </div>
+
+    <!-- قسم المشاركة -->
+    <section class="share-section">
+        <div class="container">
+            <h2 class="section-title">شاركوا الحملة</h2>
+            <p>ساعدونا في نشر الخير ووصول الحملة إلى أكبر عدد ممكن</p>
+            <div class="share-buttons">
+                <a href="#" class="share-btn facebook" id="shareFacebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" class="share-btn whatsapp" id="shareWhatsapp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="#" class="share-btn link" id="copyLink">
+                    <i class="fas fa-link"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- الفوتر -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>عن الحملة</h3>
+                    <p>حملة إصلاح طرق قرية الشغور تهدف إلى تسهيل حياة الأهالي وتحسين البنية التحتية للقرية.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>طرق التواصل</h3>
+                    <p>للاستفسارات داخل تركيا: <br>+90 539 303 33 75</p>
+                    <p>للتواصل مع عبدالمعين حسن (سوريا): <br>+352 681 133 085</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>معلومات البنك</h3>
+                    <p>TR480020600235048925180001</p>
+                    <p>MUHLIS ŞEH MUHAMMED</p>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>شكراً لكم على دعمكم ومساهمتكم في إصلاح طرق قرية الشغور</p>
+                <p>اللهم اجعلها صدقة جارية واغفر للمتصدقين وتقبل منهم</p>
+                <p>© 2025 حملة إصلاح طرق قرية الشغور</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+
+    <script>
+        // تكوين Firebase
+        const firebaseConfig = {
+            apiKey: "AIzaSyCUb5ySGCLuNwBlCbZx_VuaDfqMtWno1cs",
+            authDomain: "tttr-dbde2.firebaseapp.com",
+            projectId: "tttr-dbde2",
+            storageBucket: "tttr-dbde2.firebasestorage.app",
+            messagingSenderId: "296112669273",
+            appId: "1:296112669273:web:ae6f583e15705a688be748",
+            measurementId: "G-GP1C50C9E9"
+        };
+        
+        // تهيئة Firebase
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.firestore();
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // بيانات التبرعات (سيتم جلبها من Firebase)
+            let donations = [];
+            const targetAmount = 100000; // الهدف 100,000 ليرة تركية
+            const exchangeRate = 26; // سعر الصرف: 1 دولار = 26 ليرة تركية
+            
+            // عناصر DOM
+            const donationForm = document.getElementById('donationForm');
+            const currencyOptions = document.querySelectorAll('.currency-option');
+            const currencyLabel = document.getElementById('currencyLabel');
+            const amountInput = document.getElementById('amount');
+            const nameInput = document.getElementById('name');
+            const phoneInput = document.getElementById('phone');
+            const messageInput = document.getElementById('message');
+            const donorsContainer = document.getElementById('donorsContainer');
+            const collectedAmountElement = document.getElementById('collectedAmount');
+            const totalTRYElement = document.getElementById('totalTRY');
+            const totalUSDElement = document.getElementById('totalUSD');
+            const donationProgress = document.getElementById('donationProgress');
+            const notification = document.getElementById('notification');
+            
+            // جلب التبرعات من Firebase
+            function fetchDonations() {
+                donorsContainer.innerHTML = '<div class="loading">جاري تحميل بيانات المتبرعين...</div>';
+                
+                db.collection("donations")
+                    .orderBy("timestamp", "desc")
+                    .onSnapshot((querySnapshot) => {
+                        donations = [];
+                        let totalTRY = 0;
+                        let totalUSD = 0;
+                        
+                        querySnapshot.forEach((doc) => {
+                            const donation = doc.data();
+                            donation.id = doc.id;
+                            donations.push(donation);
+                            
+                            // حساب المبالغ الإجمالية
+                            if (donation.currency === 'try') {
+                                totalTRY += donation.amount;
+                            } else {
+                                totalUSD += donation.amount;
+                            }
+                        });
+                        
+                        // تحديث واجهة المستخدم
+                        updateUI(totalTRY, totalUSD);
+                    }, (error) => {
+                        console.error("Error fetching donations: ", error);
+                        donorsContainer.innerHTML = '<div class="loading">حدث خطأ في تحميل البيانات. يرجى المحاولة لاحقاً.</div>';
+                    });
+            }
+            
+            // تحديث واجهة المستخدم
+            function updateUI(totalTRY, totalUSD) {
+                // تحديث المبالغ الإجمالية
+                totalTRYElement.textContent = totalTRY.toLocaleString() + ' ₺';
+                totalUSDElement.textContent = totalUSD.toLocaleString() + ' $';
+                
+                // حساب المبلغ الإجمالي بالليرة التركية
+                const totalCollected = totalTRY + (totalUSD * exchangeRate);
+                
+                // تحديث المبلغ المحقق وشريط التقدم
+                collectedAmountElement.textContent = totalCollected.toLocaleString();
+                const progressPercent = Math.min(100, (totalCollected / targetAmount) * 100);
+                donationProgress.style.width = `${progressPercent}%`;
+                
+                // تحديث قائمة المتبرعين
+                renderDonorsList();
+            }
+            
+            // تبديل العملة
+            currencyOptions.forEach(option => {
+                option.addEventListener('click', function() {
+                    currencyOptions.forEach(opt => opt.classList.remove('active'));
+                    this.classList.add('active');
+                    currencyLabel.textContent = this.dataset.currency === 'try' ? 'ليرة تركية' : 'دولار أمريكي';
+                });
+            });
+            
+            // تقديم نموذج التبرع
+            donationForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const activeCurrency = document.querySelector('.currency-option.active').dataset.currency;
+                const amount = parseFloat(amountInput.value);
+                const name = nameInput.value;
+                const phone = phoneInput.value;
+                const message = messageInput.value;
+                
+                if (amount && name) {
+                    // إضافة التبرع الجديد إلى Firebase
+                    db.collection("donations").add({
+                        name,
+                        amount,
+                        currency: activeCurrency,
+                        message,
+                        phone: phone || null,
+                        timestamp: firebase.firestore.FieldValue.serverTimestamp()
+                    })
+                    .then((docRef) => {
+                        console.log("Document written with ID: ", docRef.id);
+                        
+                        // إظهار إشعار
+                        showNotification();
+                        
+                        // إعادة تعيين النموذج
+                        donationForm.reset();
+                    })
+                    .catch((error) => {
+                        console.error("Error adding document: ", error);
+                        alert("حدث خطأ أثناء إضافة التبرع. يرجى المحاولة مرة أخرى.");
+                    });
+                }
+            });
+            
+            // مشاركة على فيسبوك
+            document.getElementById('shareFacebook').addEventListener('click', function(e) {
+                e.preventDefault();
+                const url = encodeURIComponent(window.location.href);
+                const text = encodeURIComponent("انضم إلى حملة إصلاح طرق قرية الشغور وساهم في عمل الخير");
+                window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}&quote=${text}`, '_blank');
+            });
+            
+            // مشاركة على واتساب
+            document.getElementById('shareWhatsapp').addEventListener('click', function(e) {
+                e.preventDefault();
+                const text = encodeURIComponent("انضم إلى حملة إصلاح طرق قرية الشغور وساهم في عمل الخير: " + window.location.href);
+                window.open(`https://wa.me/?text=${text}`, '_blank');
+            });
+            
+            // نسخ الرابط
+            document.getElementById('copyLink').addEventListener('click', function(e) {
+                e.preventDefault();
+                navigator.clipboard.writeText(window.location.href).then(() => {
+                    alert('تم نسخ الرابط بنجاح!');
+                });
+            });
+            
+            // عرض قائمة المتبرعين
+            function renderDonorsList() {
+                donorsContainer.innerHTML = '';
+                
+                if (donations.length === 0) {
+                    donorsContainer.innerHTML = '<div class="loading">لا توجد تبرعات حتى الآن. كن أول المتبرعين!</div>';
+                    return;
+                }
+                
+                donations.forEach(donation => {
+                    const donorCard = document.createElement('div');
+                    donorCard.className = 'donor-card';
+                    
+                    const donorInfo = document.createElement('div');
+                    donorInfo.className = 'donor-info';
+                    
+                    const donorAvatar = document.createElement('div');
+                    donorAvatar.className = 'donor-avatar';
+                    donorAvatar.innerHTML = '<i class="fas fa-user"></i>';
+                    
+                    const donorDetails = document.createElement('div');
+                    donorDetails.innerHTML = `
+                        <strong>${donation.name}</strong>
+                        <div>تبرع بـ ${donation.amount} ${donation.currency === 'try' ? 'ليرة تركية' : 'دولار'}</div>
+                        ${donation.message ? `<div>${donation.message}</div>` : ''}
+                    `;
+                    
+                    donorInfo.appendChild(donorAvatar);
+                    donorInfo.appendChild(donorDetails);
+                    
+                    const donationDate = document.createElement('div');
+                    donationDate.textContent = formatDate(donation.timestamp?.toDate());
+                    
+                    donorCard.appendChild(donorInfo);
+                    donorCard.appendChild(donationDate);
+                    
+                    donorsContainer.appendChild(donorCard);
+                });
+            }
+            
+            // تنسيق التاريخ
+            function formatDate(date) {
+                if (!date) return 'تاريخ غير معروف';
+                
+                return date.toLocaleDateString('ar-EG', {
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric',
+                    hour: '2-digit',
+                    minute: '2-digit'
+                });
+            }
+            
+            // عرض الإشعار
+            function showNotification() {
+                notification.classList.add('show');
+                
+                setTimeout(() => {
+                    notification.classList.remove('show');
+                }, 5000);
+            }
+            
+            // بدء جلب البيانات من Firebase
+            fetchDonations();
+        });
+    </script>
+</body>
+</html>
